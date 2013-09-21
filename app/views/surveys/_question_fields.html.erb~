@@ -1,0 +1,11 @@
+<fieldset>
+  <%= f.label :content, "Question" %><br />
+  <%= f.text_area :content %><br />
+  <%= f.select(:importance, [['Very important', 250], ['important', 50], ['somewhat important', 10], ['a little important', 1], ['irrelevant', 0], :prompt => "Please choose"]) %>
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Remove Question" %>
+  <%= f.fields_for :answers do |builder| %>
+    <%= render 'answer_fields', f: builder %>
+  <% end %>
+  <%= link_to_add_fields "Add Answer", f, :answers %>
+</fieldset>

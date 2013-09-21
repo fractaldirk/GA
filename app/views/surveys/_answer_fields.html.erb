@@ -1,0 +1,7 @@
+<fieldset>
+  <%= f.label :content, "Answer" %>
+  <%= f.text_field :content %>
+  <%= f.select(:value, [['Yes (100)', 10], ['Somewhat yes (75)', 75], ['Neutral(50)', 50], ['Somewhat no (25)', 25], ['No (1)', 1]]) %>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to "remove", '#', class: "remove_fields" %>
+</fieldset>

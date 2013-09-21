@@ -1,0 +1,208 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (326.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (221.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSurveys (20120417221609)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120417221609')
+  [1m[36m (271.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestions (20120417221626)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "survey_id" integer, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120417221626')
+  [1m[36m (235.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswers (20120417221635)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120417221635')
+  [1m[36m (276.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddImportanceToQuestions (20130921132538)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "questions" ADD "importance" integer[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130921132538')
+  [1m[36m (248.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddValueToAnswers (20130921132622)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "answers" ADD "value" integer[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130921132622')
+  [1m[36m (198.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("surveys")
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 15:35:06 +0200
+Connecting to database specified by database.yml
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  Rendered surveys/index.html.erb within layouts/application (5.2ms)
+Compiled surveys.css  (71ms)  (pid 3709)
+Compiled application.css  (120ms)  (pid 3709)
+Compiled jquery.js  (3ms)  (pid 3709)
+Compiled jquery_ujs.js  (1ms)  (pid 3709)
+Compiled surveys.js  (1527ms)  (pid 3709)
+Compiled application.js  (1716ms)  (pid 3709)
+Completed 200 OK in 2070ms (Views: 2008.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:35:09 +0200
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:35:09 +0200
+Served asset /application.js - 200 OK (44ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:35:09 +0200
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:35:09 +0200
+Served asset /surveys.css - 200 OK (2ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:35:09 +0200
+Served asset /surveys.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:35:09 +0200
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-09-21 15:35:11 +0200
+Processing by SurveysController#new as HTML
+  Rendered surveys/_answer_fields.html.erb (2.2ms)
+  Rendered surveys/_question_fields.html.erb (57.9ms)
+  Rendered surveys/_form.html.erb (172.4ms)
+  Rendered surveys/new.html.erb within layouts/application (183.3ms)
+Completed 200 OK in 200ms (Views: 190.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-09-21 15:36:06 +0200
+Processing by SurveysController#new as HTML
+  Rendered surveys/_answer_fields.html.erb (1.3ms)
+  Rendered surveys/_question_fields.html.erb (6.6ms)
+  Rendered surveys/_form.html.erb (11.7ms)
+  Rendered surveys/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:36:06 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:36:06 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:36:06 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:36:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:36:06 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:36:06 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-09-21 15:36:56 +0200
+Processing by SurveysController#new as HTML
+  Rendered surveys/_answer_fields.html.erb (2.4ms)
+  Rendered surveys/_question_fields.html.erb (6.4ms)
+  Rendered surveys/_form.html.erb (11.8ms)
+  Rendered surveys/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:36:56 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:36:56 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:36:56 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:36:56 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:36:56 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:36:56 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2013-09-21 15:39:27 +0200
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9cRQyV6aRNX+0cxevhGyMTC7K5g7tx+ToBMPHV1v5sI=", "survey"=>{"name"=>"Test Algo 0.1", "questions_attributes"=>{"1379770617332"=>{"content"=>"Do you support the environment?", "importance"=>"50", "_destroy"=>"0", "answers_attributes"=>{"1379770634703"=>{"content"=>"I enjoy the nature an its being", "value"=>"10", "_destroy"=>"false"}, "1379770662103"=>{"content"=>"I enjoy  nature but I do not actively participate in actions", "value"=>"75", "_destroy"=>"false"}, "1379770681652"=>{"content"=>"I simply have not considered participating the in the environment yet", "value"=>"50", "_destroy"=>"false"}, "1379770704340"=>{"content"=>"No I don't but maybe I will", "value"=>"25", "_destroy"=>"false"}, "1379770716692"=>{"content"=>"No I don't and I never will", "value"=>"1", "_destroy"=>"false"}}}, "1379770632496"=>{"content"=>"What is 1+1?", "importance"=>"1", "_destroy"=>"0", "answers_attributes"=>{"1379770751232"=>{"content"=>"1", "value"=>"1", "_destroy"=>"false"}, "1379770756759"=>{"content"=>"2", "value"=>"10", "_destroy"=>"false"}, "1379770760119"=>{"content"=>"3", "value"=>"1", "_destroy"=>"false"}}}}}, "commit"=>"Create Survey"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (397.4ms)[0m  [1mINSERT INTO "surveys" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["name", "Test Algo 0.1"], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("content", "created_at", "importance", "survey_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Do you support the environment?"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["importance", 50], ["survey_id", 1], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("content", "created_at", "question_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)[0m  [["content", "I enjoy the nature an its being"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["question_id", 1], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["value", 10]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("content", "created_at", "question_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content", "I enjoy  nature but I do not actively participate in actions"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["question_id", 1], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["value", 75]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("content", "created_at", "question_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)[0m  [["content", "I simply have not considered participating the in the environment yet"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["question_id", 1], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["value", 50]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("content", "created_at", "question_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content", "No I don't but maybe I will"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["question_id", 1], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["value", 25]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("content", "created_at", "question_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)[0m  [["content", "No I don't and I never will"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["question_id", 1], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["value", 1]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("content", "created_at", "importance", "survey_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "What is 1+1?"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["importance", 1], ["survey_id", 1], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("content", "created_at", "question_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)[0m  [["content", "1"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["question_id", 2], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["value", 1]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("content", "created_at", "question_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content", "2"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["question_id", 2], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["value", 10]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("content", "created_at", "question_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)[0m  [["content", "3"], ["created_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["question_id", 2], ["updated_at", Sat, 21 Sep 2013 13:39:27 UTC +00:00], ["value", 1]]
+  [1m[35m (225.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/surveys/1
+Completed 302 Found in 656ms (ActiveRecord: 626.2ms)
+
+
+Started GET "/surveys/1" for 127.0.0.1 at 2013-09-21 15:39:27 +0200
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.3ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered surveys/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:39:27 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:39:27 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:39:28 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:39:28 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:39:28 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:39:28 +0200
+Served asset /application.js - 304 Not Modified (0ms)
