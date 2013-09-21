@@ -206,3 +206,1957 @@ Served asset /surveys.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:39:28 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/response" for 127.0.0.1 at 2013-09-21 15:50:34 +0200
+Processing by SurveysController#response as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.6ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered surveys/response.html.erb within layouts/application (0.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 30ms
+
+NoMethodError (undefined method `body=' for #<Survey:0x007fa93804b760>):
+  activemodel (3.2.8) lib/active_model/attribute_methods.rb:407:in `method_missing'
+  activerecord (3.2.8) lib/active_record/attribute_methods.rb:149:in `method_missing'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:18:in `response_body='
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__3097327673992074077__process_action__2887910366157026581__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2119993544948222062__call__4606448210735203594__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (119.1ms)
+
+
+Started GET "/surveys/1/response" for 127.0.0.1 at 2013-09-21 15:51:07 +0200
+Processing by SurveysController#response as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.4ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered surveys/response.html.erb within layouts/application (0.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `body=' for #<Survey:0x007fa928035470>):
+  activemodel (3.2.8) lib/active_model/attribute_methods.rb:407:in `method_missing'
+  activerecord (3.2.8) lib/active_record/attribute_methods.rb:149:in `method_missing'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:18:in `response_body='
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__3097327673992074077__process_action__2887910366157026581__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2119993544948222062__call__4606448210735203594__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started GET "/surveys/1/" for 127.0.0.1 at 2013-09-21 15:51:17 +0200
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.4ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered surveys/show.html.erb within layouts/application (91.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 104ms
+
+NoMethodError (undefined method `body=' for #<Survey:0x00000001d5eb10>):
+  activemodel (3.2.8) lib/active_model/attribute_methods.rb:407:in `method_missing'
+  activerecord (3.2.8) lib/active_record/attribute_methods.rb:149:in `method_missing'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:18:in `response_body='
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__3097327673992074077__process_action__2989113677409386504__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2119993544948222062__call__4606448210735203594__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/surveys/" for 127.0.0.1 at 2013-09-21 15:51:22 +0200
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."survey_id" = 1
+  Rendered surveys/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 25ms
+
+ActiveRecord::RecordNotFound (Couldn't find Survey without an ID):
+  app/controllers/surveys_controller.rb:11:in `response'
+
+
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.2ms)
+
+
+Started GET "/surveys/" for 127.0.0.1 at 2013-09-21 15:51:39 +0200
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."survey_id" = 1
+  Rendered surveys/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 48ms (Views: 33.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:51:39 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:51:39 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:39 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:39 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:39 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:39 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1" for 127.0.0.1 at 2013-09-21 15:51:41 +0200
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered surveys/show.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 75ms (Views: 72.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:51:41 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:51:41 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:41 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:41 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:41 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:41 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/response" for 127.0.0.1 at 2013-09-21 15:51:44 +0200
+Processing by SurveysController#response as HTML
+  Parameters: {"id"=>"1"}
+  Rendered surveys/response.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:51:45 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:51:45 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:45 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:45 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:51:45 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/response" for 127.0.0.1 at 2013-09-21 15:52:20 +0200
+Processing by SurveysController#response as HTML
+  Parameters: {"id"=>"1"}
+  Rendered surveys/response.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p>lala</p>
+    2: <p><%= @survey.name %></p>
+  app/views/surveys/response.html.erb:2:in `_app_views_surveys_response_html_erb___2619313665056322015_70182315860940'
+
+
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/surveys/1/response" for 127.0.0.1 at 2013-09-21 15:52:48 +0200
+Processing by SurveysController#response as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered surveys/response.html.erb within layouts/application (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 21ms
+
+NoMethodError (undefined method `body=' for #<Survey:0x007fa94019a988>):
+  activemodel (3.2.8) lib/active_model/attribute_methods.rb:407:in `method_missing'
+  activerecord (3.2.8) lib/active_record/attribute_methods.rb:149:in `method_missing'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:18:in `response_body='
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__3097327673992074077__process_action__2887910366157026581__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2119993544948222062__call__4606448210735203594__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /home/circle/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 15:55:58 +0200
+Connecting to database specified by database.yml
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."survey_id" = 1
+  Rendered surveys/index.html.erb within layouts/application (118.4ms)
+Completed 500  in 255ms
+
+ActiveRecord::RecordNotFound - Couldn't find Survey without an ID:
+  activerecord (3.2.8) lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+  activerecord (3.2.8) lib/active_record/relation/finder_methods.rb:107:in `find'
+  activerecord (3.2.8) lib/active_record/querying.rb:5:in `find'
+  app/controllers/surveys_controller.rb:43:in `response'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:18:in `response_body='
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__3826761817944873040__process_action__2584444580452177646__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__4321630152927826259__call__2505647286126691310__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/23858820/variables" for 127.0.0.1 at 2013-09-21 15:55:59 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 15:56:33 +0200
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."survey_id" = 1
+  Rendered surveys/index.html.erb within layouts/application (68.3ms)
+Completed 500  in 87ms
+
+NoMethodError - undefined method `status' for nil:NilClass:
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__4321630152927826259__call__2505647286126691310__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70051728006080/variables" for 127.0.0.1 at 2013-09-21 15:56:34 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 15:56:43 +0200
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."survey_id" = 1
+  Rendered surveys/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 43ms (Views: 32.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:44 +0200
+Served asset /jquery.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:44 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:44 +0200
+Served asset /surveys.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:56:44 +0200
+Served asset /surveys.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:56:44 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:44 +0200
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/surveys/1" for 127.0.0.1 at 2013-09-21 15:56:45 +0200
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.3ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered surveys/show.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:56:45 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:56:45 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:45 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:45 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:45 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/response" for 127.0.0.1 at 2013-09-21 15:56:53 +0200
+Processing by SurveysController#response as HTML
+  Parameters: {"id"=>"1"}
+  Rendered surveys/response.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:56:53 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:56:53 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:53 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:53 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:56:53 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/" for 127.0.0.1 at 2013-09-21 15:58:28 +0200
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered surveys/show.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 81ms (Views: 68.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:58:29 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:58:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:58:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:58:29 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:58:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:58:29 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/counter" for 127.0.0.1 at 2013-09-21 15:58:32 +0200
+Processing by SurveysController#counter as HTML
+  Parameters: {"id"=>"1"}
+Completed 500  in 101ms
+
+ActionView::MissingTemplate - Missing template surveys/counter, application/counter with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/home/circle/GA folder/quest/app/views"
+:
+  actionpack (3.2.8) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.8) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__3826761817944873040__process_action__655016893063607350__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__4321630152927826259__call__2505647286126691310__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70051725703180/variables" for 127.0.0.1 at 2013-09-21 15:58:32 +0200
+
+
+Started GET "/surveys/1/counter" for 127.0.0.1 at 2013-09-21 15:58:51 +0200
+Processing by SurveysController#counter as HTML
+  Parameters: {"id"=>"1"}
+  Rendered surveys/counter.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:58:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:58:51 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:58:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:58:51 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:58:51 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:58:51 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/counter" for 127.0.0.1 at 2013-09-21 15:59:21 +0200
+Processing by SurveysController#counter as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered surveys/counter.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 8.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:59:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:59:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:59:21 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:59:21 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:59:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:59:21 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/counter" for 127.0.0.1 at 2013-09-21 15:59:33 +0200
+Processing by SurveysController#counter as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.4ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered surveys/counter.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 15:59:33 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 15:59:33 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 15:59:33 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 15:59:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 15:59:33 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 15:59:33 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/counter" for 127.0.0.1 at 2013-09-21 16:00:07 +0200
+Processing by SurveysController#counter as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.5ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered surveys/counter.html.erb within layouts/application (3.0ms)
+Completed 500  in 14ms
+
+NoMethodError - undefined method `model_name' for NilClass:Class:
+  activemodel (3.2.8) lib/active_model/naming.rb:163:in `model_name_from_record_or_class'
+  activemodel (3.2.8) lib/active_model/naming.rb:158:in `param_key'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:369:in `form_for'
+  app/views/surveys/counter.html.erb:3:in `_app_views_surveys_counter_html_erb___4395262934018217642_70051730536500'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__3826761817944873040__process_action__655016893063607350__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__4321630152927826259__call__2505647286126691310__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70051520720780/variables" for 127.0.0.1 at 2013-09-21 16:00:07 +0200
+
+
+Started GET "/surveys/1/" for 127.0.0.1 at 2013-09-21 16:00:38 +0200
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.2ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/show.html.erb within layouts/application (96.4ms)
+Completed 200 OK in 115ms (Views: 102.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:00:38 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:00:38 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:00:38 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:00:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:00:38 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:00:38 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/counter" for 127.0.0.1 at 2013-09-21 16:00:41 +0200
+Processing by SurveysController#counter as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.5ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.7ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  Rendered surveys/_answer_fields.html.erb (3.9ms)
+  Rendered surveys/_answer_fields.html.erb (1.5ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.2ms)
+  Rendered surveys/_question_fields.html.erb (32.9ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/_answer_fields.html.erb (1.2ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.3ms)
+  Rendered surveys/_question_fields.html.erb (14.5ms)
+  Rendered surveys/_answer_fields.html.erb (1.2ms)
+  Rendered surveys/_question_fields.html.erb (5.3ms)
+  Rendered surveys/counter.html.erb within layouts/application (133.2ms)
+Completed 200 OK in 147ms (Views: 141.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:00:41 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:00:41 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:00:41 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:00:41 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:00:41 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:00:41 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSurveys (20120417221609)
+Migrating to CreateQuestions (20120417221626)
+Migrating to CreateAnswers (20120417221635)
+Migrating to AddImportanceToQuestions (20130921132538)
+Migrating to AddValueToAnswers (20130921132622)
+Migrating to AddResponsesToAnswers (20130921141307)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "answers" ADD "my_answer" boolean
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "answers" ADD "your_answer" boolean[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130921141307')
+  [1m[36m (1264.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("surveys")
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:13:20 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.2ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  Rendered surveys/_answer_fields.html.erb (1.4ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.2ms)
+  Rendered surveys/_question_fields.html.erb (88.3ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/_answer_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_fields.html.erb (1.2ms)
+  Rendered surveys/_question_fields.html.erb (13.9ms)
+  Rendered surveys/_answer_fields.html.erb (1.2ms)
+  Rendered surveys/_question_fields.html.erb (5.3ms)
+  Rendered surveys/employer.html.erb within layouts/application (150.1ms)
+Completed 200 OK in 169ms (Views: 156.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:13:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:13:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:13:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:13:21 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:13:21 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:13:21 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:18:08 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.2ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  Rendered surveys/_answer_response_fields.html.erb (2.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.3ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_question_response_fields.html.erb (42.6ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.8ms)
+  Rendered surveys/_question_response_fields.html.erb (11.2ms)
+  Rendered surveys/employer.html.erb within layouts/application (137.0ms)
+Completed 200 OK in 157ms (Views: 144.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:18:09 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:18:09 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:18:09 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:18:09 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:18:09 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:18:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:19:44 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.5ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  Rendered surveys/_answer_response_fields.html.erb (1.5ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.7ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.6ms)
+  Rendered surveys/_answer_response_fields.html.erb (2.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.9ms)
+  Rendered surveys/_question_response_fields.html.erb (53.6ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/_answer_response_fields.html.erb (1.4ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.6ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.7ms)
+  Rendered surveys/_question_response_fields.html.erb (14.3ms)
+  Rendered surveys/employer.html.erb within layouts/application (81.5ms)
+Completed 200 OK in 94ms (Views: 87.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:19:45 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:19:45 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:19:45 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:19:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:19:45 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:19:45 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:31:26 +0200
+Connecting to database specified by database.yml
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  Rendered surveys/_answer_response_fields.html.erb (2.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (0.9ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_question_response_fields.html.erb (42.8ms)
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (0.9ms)
+  Rendered surveys/_answer_response_fields.html.erb (0.9ms)
+  Rendered surveys/_question_response_fields.html.erb (10.3ms)
+  Rendered surveys/employer.html.erb within layouts/application (193.9ms)
+Completed 200 OK in 365ms (Views: 258.8ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:31:27 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:31:27 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:31:27 +0200
+Served asset /surveys.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:31:27 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:31:27 +0200
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:31:27 +0200
+Served asset /surveys.js - 304 Not Modified (3ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:31:49 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  Rendered surveys/_answer_response_fields.html.erb (2.3ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_question_response_fields.html.erb (16.5ms)
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_question_response_fields.html.erb (11.0ms)
+  Rendered surveys/employer.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:31:50 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:31:50 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:31:50 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:31:50 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:31:50 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:31:50 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:32:03 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.5ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  Rendered surveys/_answer_response_fields.html.erb (2.2ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.2ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_question_response_fields.html.erb (16.9ms)
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_question_response_fields.html.erb (10.6ms)
+  Rendered surveys/employer.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 49ms (Views: 42.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:32:03 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:32:03 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:32:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:32:03 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:32:03 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:32:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:33:42 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.4ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  Rendered surveys/_answer_response_fields.html.erb (12.1ms)
+  Rendered surveys/_question_response_fields.html.erb (17.0ms)
+  Rendered surveys/employer.html.erb within layouts/application (22.3ms)
+Completed 500  in 30ms
+
+NoMethodError - undefined method `my_value' for #<Answer:0x007f2a78716ac0>:
+  activemodel (3.2.8) lib/active_model/attribute_methods.rb:407:in `method_missing'
+  activerecord (3.2.8) lib/active_record/attribute_methods.rb:149:in `method_missing'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1154:in `value'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1145:in `value'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1093:in `to_check_box_tag'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:843:in `check_box'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1325:in `check_box'
+  app/views/surveys/_answer_response_fields.html.erb:2:in `_app_views_surveys__answer_response_fields_html_erb___3806848421960207793_69910192592940'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.8) lib/action_view/helpers/rendering_helper.rb:27:in `render'
+  app/views/surveys/_question_response_fields.html.erb:8:in `block in _app_views_surveys__question_response_fields_html_erb__1977136134317931493_21854600'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:607:in `fields_for'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1467:in `fields_for_nested_model'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1453:in `block in fields_for_with_nested_attributes'
+  activerecord (3.2.8) lib/active_record/associations/collection_proxy.rb:89:in `method_missing'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1452:in `fields_for_with_nested_attributes'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1302:in `fields_for'
+  app/views/surveys/_question_response_fields.html.erb:7:in `_app_views_surveys__question_response_fields_html_erb__1977136134317931493_21854600'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.8) lib/action_view/helpers/rendering_helper.rb:27:in `render'
+  app/views/surveys/employer.html.erb:21:in `block (2 levels) in _app_views_surveys_employer_html_erb___2583164179655070528_21707100'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:607:in `fields_for'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1467:in `fields_for_nested_model'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1453:in `block in fields_for_with_nested_attributes'
+  activerecord (3.2.8) lib/active_record/associations/collection_proxy.rb:89:in `method_missing'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1452:in `fields_for_with_nested_attributes'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1302:in `fields_for'
+  app/views/surveys/employer.html.erb:20:in `block in _app_views_surveys_employer_html_erb___2583164179655070528_21707100'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:607:in `fields_for'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:378:in `form_for'
+  app/views/surveys/employer.html.erb:3:in `_app_views_surveys_employer_html_erb___2583164179655070528_21707100'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__2771346158614563946__process_action__3015208827172264362__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__3197032895637270112__call__3144808986664041499__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/circle/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/69910193595360/variables" for 127.0.0.1 at 2013-09-21 16:33:43 +0200
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:35:15 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.1ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  Rendered surveys/_answer_response_fields.html.erb (2.4ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.2ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.2ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.2ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.3ms)
+  Rendered surveys/_question_response_fields.html.erb (17.3ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/_answer_response_fields.html.erb (1.3ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.2ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.3ms)
+  Rendered surveys/_question_response_fields.html.erb (11.0ms)
+  Rendered surveys/employer.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:35:15 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:35:15 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:35:15 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:35:15 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:35:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:35:15 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:38:22 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.4ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  Rendered surveys/_answer_response_fields.html.erb (2.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.2ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_question_response_fields.html.erb (17.3ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_question_response_fields.html.erb (10.9ms)
+  Rendered surveys/employer.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:38:22 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:38:22 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:38:22 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:38:22 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:38:22 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:38:22 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:39:28 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.1ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  Rendered surveys/_answer_response_fields.html.erb (2.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_question_response_fields.html.erb (22.2ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/_answer_response_fields.html.erb (1.1ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.3ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_question_response_fields.html.erb (11.4ms)
+  Rendered surveys/employer.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 93ms (Views: 90.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:39:28 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:39:28 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:39:28 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:39:28 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:39:28 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:39:28 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-21 16:41:43 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.6ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  Rendered surveys/_answer_response_fields.html.erb (2.4ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.9ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.7ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.6ms)
+  Rendered surveys/_answer_response_fields.html.erb (2.4ms)
+  Rendered surveys/_question_response_fields.html.erb (25.9ms)
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/_answer_response_fields.html.erb (2.4ms)
+  Rendered surveys/_answer_response_fields.html.erb (2.6ms)
+  Rendered surveys/_answer_response_fields.html.erb (1.0ms)
+  Rendered surveys/_question_response_fields.html.erb (22.9ms)
+  Rendered surveys/employer.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 74ms (Views: 66.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 16:41:43 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 16:41:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 16:41:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 16:41:43 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 16:41:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 16:41:43 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started PUT "/surveys/1" for 127.0.0.1 at 2013-09-21 17:46:46 +0200
+Connecting to database specified by database.yml
+Processing by SurveysController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9cRQyV6aRNX+0cxevhGyMTC7K5g7tx+ToBMPHV1v5sI=", "survey"=>{"name"=>"Test Algo 0.1-1", "questions_attributes"=>{"0"=>{"importance"=>"50", "_destroy"=>"0", "answers_attributes"=>{"0"=>{"my_answer"=>"1", "your_answer"=>"0", "value"=>"10", "id"=>"1"}, "1"=>{"my_answer"=>"0", "your_answer"=>"0", "value"=>"75", "id"=>"2"}, "2"=>{"my_answer"=>"0", "your_answer"=>"1", "value"=>"50", "id"=>"3"}, "3"=>{"my_answer"=>"0", "your_answer"=>"0", "value"=>"25", "id"=>"4"}, "4"=>{"my_answer"=>"0", "your_answer"=>"0", "value"=>"1", "id"=>"5"}}, "id"=>"1"}, "1"=>{"importance"=>"1", "_destroy"=>"0", "answers_attributes"=>{"0"=>{"my_answer"=>"1", "your_answer"=>"0", "value"=>"1", "id"=>"6"}, "1"=>{"my_answer"=>"0", "your_answer"=>"1", "value"=>"10", "id"=>"7"}, "2"=>{"my_answer"=>"0", "your_answer"=>"0", "value"=>"1", "id"=>"8"}}, "id"=>"2"}}}, "commit"=>"Update Survey", "id"=>"1"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1 AND "questions"."id" IN (1, 2)[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1 AND "answers"."id" IN (1, 2, 3, 4, 5)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2 AND "answers"."id" IN (6, 7, 8)[0m
+  [1m[35m (15.0ms)[0m  UPDATE "surveys" SET "name" = 'Test Algo 0.1-1', "updated_at" = '2013-09-21 15:46:48.638170' WHERE "surveys"."id" = 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "answers" SET "my_answer" = 't', "your_answer" = 'f', "updated_at" = '2013-09-21 15:46:48.673607' WHERE "answers"."id" = 1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "answers" SET "my_answer" = 'f', "your_answer" = 'f', "updated_at" = '2013-09-21 15:46:48.675999' WHERE "answers"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mUPDATE "answers" SET "my_answer" = 'f', "your_answer" = 't', "updated_at" = '2013-09-21 15:46:48.677790' WHERE "answers"."id" = 3[0m
+  [1m[35m (0.2ms)[0m  UPDATE "answers" SET "my_answer" = 'f', "your_answer" = 'f', "updated_at" = '2013-09-21 15:46:48.713275' WHERE "answers"."id" = 4
+  [1m[36m (0.1ms)[0m  [1mUPDATE "answers" SET "my_answer" = 'f', "your_answer" = 'f', "updated_at" = '2013-09-21 15:46:48.715094' WHERE "answers"."id" = 5[0m
+  [1m[35m (0.1ms)[0m  UPDATE "answers" SET "my_answer" = 't', "your_answer" = 'f', "updated_at" = '2013-09-21 15:46:48.717162' WHERE "answers"."id" = 6
+  [1m[36m (0.1ms)[0m  [1mUPDATE "answers" SET "my_answer" = 'f', "your_answer" = 't', "updated_at" = '2013-09-21 15:46:48.718703' WHERE "answers"."id" = 7[0m
+  [1m[35m (0.1ms)[0m  UPDATE "answers" SET "my_answer" = 'f', "your_answer" = 'f', "updated_at" = '2013-09-21 15:46:48.720250' WHERE "answers"."id" = 8
+  [1m[36m (274.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/surveys/1
+Completed 302 Found in 820ms (ActiveRecord: 294.4ms)
+
+
+Started GET "/surveys/1" for 127.0.0.1 at 2013-09-21 17:46:49 +0200
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.1ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2[0m
+  Rendered surveys/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 269ms (Views: 265.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-21 17:46:49 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-21 17:46:49 +0200
+Served asset /jquery.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-21 17:46:49 +0200
+Served asset /surveys.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-21 17:46:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-21 17:46:49 +0200
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-21 17:46:49 +0200
+Served asset /surveys.js - 304 Not Modified (2ms)

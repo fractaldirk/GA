@@ -1,8 +1,7 @@
 Questionnaire::Application.routes.draw do
   resources :surveys do
     member do
-      get 'employer'
-      get 'candidate'
+      get 'counter'
     end
   end
   root to: 'surveys#index'

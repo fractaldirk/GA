@@ -1,0 +1,8 @@
+<fieldset>
+  <tr>
+    <td><%= f.check_box :my_answer %></td>
+    <td><%= f.check_box :your_answer %></td>
+    <td><%= f.text_field :content, :disabled => true %></td>
+    <td><%= f.select(:value, [['Yes (100)', 10], ['Somewhat yes (75)', 75], ['Neutral(50)', 50], ['Somewhat no (25)', 25], ['No (1)', 1]]) %></td>
+  </tr>
+</fieldset>

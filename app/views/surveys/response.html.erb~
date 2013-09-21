@@ -1,0 +1,2 @@
+<p>lala</p>
+<p><%= @survey.name %></p>
