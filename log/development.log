@@ -12598,3 +12598,288 @@ Served asset /results.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-22 03:01:56 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-22 23:46:52 +0200
+Connecting to database specified by database.yml
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."survey_id" = 1
+  Rendered surveys/index.html.erb within layouts/application (119.2ms)
+Completed 200 OK in 731ms (Views: 604.3ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-22 23:46:54 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-22 23:46:54 +0200
+Served asset /surveys.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:54 +0200
+Served asset /jquery.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:55 +0200
+Served asset /surveys.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:55 +0200
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/results.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:55 +0200
+Served asset /results.js - 304 Not Modified (2ms)
+
+
+Started GET "/surveys/1" for 127.0.0.1 at 2013-09-22 23:46:58 +0200
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.3ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered surveys/show.html.erb within layouts/application (90.4ms)
+Completed 200 OK in 112ms (Views: 107.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-22 23:46:59 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:59 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-22 23:46:59 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:59 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/results.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:59 +0200
+Served asset /results.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:59 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-22 23:46:59 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2013-09-22 23:53:18 +0200
+Processing by ResultsController#index as HTML
+  [1m[36mResult Load (0.5ms)[0m  [1mSELECT "results".* FROM "results" [0m
+  Rendered results/index.html.erb within layouts/application (82.3ms)
+Completed 200 OK in 133ms (Views: 114.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/results.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /results.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Processing by ResultsController#index as HTML
+  [1m[35mResult Load (0.6ms)[0m  SELECT "results".* FROM "results" 
+  Rendered results/index.html.erb within layouts/application (95.0ms)
+Completed 200 OK in 116ms (Views: 107.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/results.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /results.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-22 23:53:19 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/results" for 127.0.0.1 at 2013-09-22 23:58:01 +0200
+Processing by ResultsController#index as HTML
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results" [0m
+  Rendered results/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-22 23:58:01 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-22 23:58:01 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-22 23:58:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/results.js?body=1" for 127.0.0.1 at 2013-09-22 23:58:01 +0200
+Served asset /results.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-22 23:58:01 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-22 23:58:01 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-22 23:58:01 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-22 23:59:20 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.1ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1[0m
+  [1m[35mResult Load (0.1ms)[0m  SELECT "results".* FROM "results" WHERE "results"."survey_id" = 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 1)[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE (question_id = 2)
+  Rendered surveys/employer.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 36ms (Views: 30.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-22 23:59:20 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:20 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:20 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-22 23:59:20 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:20 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/results.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:20 +0200
+Served asset /results.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:20 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/1/employer" for 127.0.0.1 at 2013-09-22 23:59:21 +0200
+Processing by SurveysController#employer as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.4ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results" WHERE "results"."survey_id" = 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE (question_id = 1)
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 2)[0m
+  Rendered surveys/employer.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 38ms (Views: 30.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-22 23:59:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-09-22 23:59:21 +0200
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/results.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:21 +0200
+Served asset /results.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:21 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-09-22 23:59:21 +0200
+Served asset /surveys.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSurveys (20120417221609)
+Migrating to CreateQuestions (20120417221626)
+Migrating to CreateAnswers (20120417221635)
+Migrating to AddImportanceToQuestions (20130921132538)
+Migrating to AddValueToAnswers (20130921132622)
+Migrating to AddResponsesToAnswers (20130921141307)
+Migrating to CreateResults (20130921232337)
+Migrating to AddSurveyIdToResults (20130922005153)
+Migrating to AddUserTypeToResults (20130922222113)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "results" ADD "user_type" integer
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130922222113')[0m
+  [1m[35m (277.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("answers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("results")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("surveys")

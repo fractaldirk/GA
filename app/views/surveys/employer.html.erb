@@ -17,7 +17,8 @@
         <%= question.id %>
           <%= f.fields_for :results do |f| %>
             <%= f.collection_select(:score, Answer.find(:all, :conditions => [ "question_id = ?", question.id ]), :value, :content ) %>
-            <%= f.text_field :question_id, :value => question.id %>
+            <%= f.hidden_field :question_id, :value => question.id %>
+            <%= f.hidden_field :user_type, :value => 1 %>
           <% end %>
         <br/>
         <hr />
