@@ -12,17 +12,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-
-  <%= f.fields_for :questions do |builder| %>
-    <%= render 'question_response_fields', f: builder %>
+  <% @survey.questions.each do |question| %>
+        <%= question.content %>
+        <%= question.id %>
+          <%= f.fields_for :results, @survey do |f| %>
+            <%= f.collection_select(:score, Answer.find(:all, :conditions => [ "question_id = ?", question.id ]), :value, :content ) %>
+            <%= f.text_field :question_id, :value => question.id %>
+          <% end %>
+        <br/>
+        <hr />
   <% end %>
-  <%= link_to_add_fields "Add Question", f, :questions %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag "Create" %>
   </div>
 <% end %>

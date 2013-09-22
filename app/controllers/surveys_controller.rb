@@ -41,6 +41,7 @@ class SurveysController < ApplicationController
 
   def employer
     @survey = Survey.find(params[:id])
+    @survey.results.build
   end
 
   def candidate

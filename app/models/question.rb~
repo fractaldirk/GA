@@ -1,6 +1,8 @@
 class Question < ActiveRecord::Base
-  attr_accessible :content, :survey_id, :answers_attributes
+  attr_accessible :content, :survey_id, :answers_attributes, :results_attributes, :importance
   belongs_to :survey
   has_many :answers
+  has_many :results
   accepts_nested_attributes_for :answers, allow_destroy: true
+  accepts_nested_attributes_for :results, allow_destroy: true
 end

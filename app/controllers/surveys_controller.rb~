@@ -22,6 +22,7 @@ class SurveysController < ApplicationController
 
   def edit
     @survey = Survey.find(params[:id])
+    1.times @survey.results.build
   end
 
   def update
@@ -41,6 +42,7 @@ class SurveysController < ApplicationController
 
   def employer
     @survey = Survey.find(params[:id])
+    @result = Result.new
   end
 
   def candidate
